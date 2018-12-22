@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
+import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Dimensions} from 'react-native';
 import LoginForm from './LoginForm';
 
 export default class Login extends Component {
@@ -25,6 +25,8 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
     container: {
+        height: Dimensions.get('window').height,
+        width: Dimensions.get('window').width,
         flex: 1,
         backgroundColor: '#3498db'
     },
