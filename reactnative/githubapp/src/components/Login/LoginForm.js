@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, TextInput, TouchableOpacity, StatusBar, Text} from 'react-native';
 
+
 export default class LoginForm extends Component {
     render() {
+        
         return(
             <View style={styles.container}>
             <StatusBar
@@ -27,7 +29,10 @@ export default class LoginForm extends Component {
                     ref={(input) => this.passwordInput = input}
                 />
 
-                <TouchableOpacity style={styles.buttonContainer}>
+                <TouchableOpacity style={styles.buttonContainer}
+                    onPress={() => this.props.navigation.navigate('HomeScreen')}
+                    title="Home"
+                >
                     <Text style={styles.buttonText}>Login</Text>
                 </TouchableOpacity>               
 
@@ -48,7 +53,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
     },
     buttonConatiner: {
-        backgroundColor: '#2980b9',
+        backgroundColor: '#rgba(193, 66, 66, 1)',
         paddingVertical: 15,
     },
     buttonText: {

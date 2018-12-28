@@ -9,16 +9,23 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import Login from './src/components/Login/Login.js'
+import Home from './src/components/Home/Home.js'
+import {createStackNavigator, createAppContainer} from 'react-navigation';
 
-
-
+const AppNavigator = createStackNavigator({
+  LoginScreen: {screen: Login},
+  HomeScreen: {screen: Home},
+  
+});
+const AppContainer = createAppContainer(AppNavigator)
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Login/>
+      <View>
+        <AppContainer/>
       </View>
+      
     );
   }
 }
