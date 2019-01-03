@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Dimensions} from 'react-native';
-import LoginForm from './LoginForm';
+import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Dimensions, Button, TextInput,} from 'react-native';
 
-export class Login extends Component {
+export default class Login extends Component {
     render() {
         return(
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
@@ -11,19 +10,40 @@ export class Login extends Component {
                         style={styles.logo}
                         source={require('../../images/octocat.jpg')} 
                     />
-
                     <Text style={styles.title}>An app made for Github using React Native</Text>
                 </View>
-                <View style={styles.formContainer}>
-                    <LoginForm/>
-                </View>
+                <View style={styles.container}>
+                
+                <TextInput 
+                    placeholder="username or email"
+                    placeholderTextColor='rgba(255, 255, 255, 0.2)'
+                    returnKeyType='next'
+                    onSubmitEditing={() => this.passwordInput.focus()}
+                    keyboardType="email-address"
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    style={styles.input}
+                />
+                <TextInput 
+                    placeholder="password"
+                    placeholderTextColor='rgba(255, 255, 255, 0.2)'
+                    returnKeyType='go'
+                    secureTextEntry
+                    style={styles.input}
+                    ref={(input) => this.passwordInput = input}
+                />
 
+                <Button style={styles.buttonContainer}
+                  title='home'
+                  onPress={() => this.props.navigation.navigate('Home')}
+                ></Button>                          
+
+            </View>
             </KeyboardAvoidingView>
         )
     }
 }
 
-export default Login
 
 const styles = StyleSheet.create({
     container: {
@@ -47,5 +67,21 @@ const styles = StyleSheet.create({
         width: 160,
         textAlign: 'center',
         opacity: 0.9,
-    }
+    },
+    input: {
+        height: 40,
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+        marginBottom: 10,
+        color: '#FFF',
+        paddingHorizontal: 10,
+    },
+    buttonConatiner: {
+        backgroundColor: '#rgba(193, 66, 66, 1)',
+        paddingVertical: 15,
+    },
+    buttonText: {
+        textAlign:'center',
+        color: '#FFFFFF',
+        fontWeight: '700',
+    },
 })

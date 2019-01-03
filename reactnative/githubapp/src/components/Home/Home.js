@@ -6,19 +6,29 @@ export class Home extends Component {
     render() {
         
         return(
-            <View style={styles.container}>
-                <Button
-                    title="Login"
-                    onPress={() => this.props.navigation.navigate('LoginScreen')}
-                />
-            </View>
-               
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Details Screen</Text>
+        <Button
+          title="Go to Home... again"
+          onPress={() => this.props.navigation.push('Home')}
+        />
+        <Button
+          title="Go to Login"
+          onPress={() => this.props.navigation.navigate('Login')}
+        />
+        <Button
+          title="Go back"
+          onPress={() => this.props.navigation.goBack()}
+        />
+      </View>   
            
         )
     }
-}
+};
 
-export default Home
+export default Home;
+
+
 
 const styles = StyleSheet.create({
     container: {
