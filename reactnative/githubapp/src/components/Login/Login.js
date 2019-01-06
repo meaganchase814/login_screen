@@ -34,7 +34,7 @@ export default class Login extends Component {
                 />
 
                 <Button style={styles.buttonContainer}
-                  title='home'
+                  title='Login'
                   onPress={() => this.props.navigation.navigate('Home')}
                 ></Button>                          
 
