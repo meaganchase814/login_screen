@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "navbar-native": "^1.6.1",
+    "prop-types": "^15.6.2",
     "react": "16.6.3",
     "react-native": "0.57.8",
     "react-native-gesture-handler": "^1.0.12",
