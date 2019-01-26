@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Image, Text, Dimensions, Button,} from 'react-native';
 
-import Toolbar from './src/components/Toolbar/Toolbar';
-import SideDrawer from './src/components/SideDrawer/SideDrawer';
-import Backdrop from './src/components/Backdrop/Backdrop';
+import Toolbar from '../Toolbar/Toolbar.js';
+import SideDrawer from '../SideDrawer/SideDrawer.js';
+import Backdrop from '../Backdrop/Backdrop.js'
 
 export default class Home extends Component {
   constructor(props) {
@@ -37,14 +37,14 @@ export default class Home extends Component {
       backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
     return (
-      <div style={{height: '100%'}}>
+      <View style={{height: '100%'}}>
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <main style={{marginTop: '64px'}}>
           <p>this is the page content</p>
         </main>
-      </div>
+      </View>
     );
   }
 }
