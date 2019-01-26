@@ -1,13 +1,23 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Image, Text, Dimensions, Button,} from 'react-native';
-import Toolbar from './components/Toolbar/Toolbar';
-import SideDrawer from './components/SideDrawer/SideDrawer';
-import Backdrop from './components/Backdrop/Backdrop';
 
-class Home extends Component {
-  state = {
-    sideDrawerOpen: false
-  };
+import Toolbar from './src/components/Toolbar/Toolbar';
+import SideDrawer from './src/components/SideDrawer/SideDrawer';
+import Backdrop from './src/components/Backdrop/Backdrop';
+
+export default class Home extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      sideDrawerOpen: false
+    };
+
+    this.drawerToggleClickHandler = this.drawerToggleClickHandler.bind(this);
+    this.backdropClickHandler = this.backdropClickHandler.bind(this);
+  }
+
+  
 
   drawerToggleClickHandler = () => {
     this.setState((prevState) => {
@@ -39,7 +49,7 @@ class Home extends Component {
   }
 }
 
-export default Home;
+
 
 
 // export class Home extends Component {

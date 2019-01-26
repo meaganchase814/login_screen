@@ -10,9 +10,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, AppRegistry} from 'react-native';
 import Login from './src/components/Login/Login.js'
 import Home from './src/components/Home/Home.js'
-import Toolbar from './components/Toolbar/Toolbar';
-import SideDrawer from './components/SideDrawer/SideDrawer';
-import Backdrop from './components/Backdrop/Backdrop';
+
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 const AppNavigator = createStackNavigator(
@@ -28,7 +26,7 @@ const AppNavigator = createStackNavigator(
 const AppContainer = createAppContainer(AppNavigator);
 
 
-class App extends Component {
+export default class App extends Component {
   render() {
     
     return (
@@ -37,7 +35,7 @@ class App extends Component {
   }
 }
 
-export default App;
+// export default App;
 
 
 const styles = StyleSheet.create({
