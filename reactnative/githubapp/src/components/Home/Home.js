@@ -1,54 +1,56 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Image, Text, Dimensions, Button,} from 'react-native';
+import {StyleSheet, View, Image, Text, Dimensions, Button,LoginForm} from 'react-native';
 
 import Toolbar from '../Toolbar/Toolbar.js';
 import SideDrawer from '../SideDrawer/SideDrawer.js';
 import Backdrop from '../Backdrop/Backdrop.js'
 
-export default class Home extends Component {
-  constructor(props) {
-    super(props)
+export class Home extends Component {
+  // constructor(props) {
+  //   super(props)
 
-    this.state = {
-      sideDrawerOpen: false
-    };
+  //   this.state = {
+  //     sideDrawerOpen: false,
+  //   };
 
-    this.drawerToggleClickHandler = this.drawerToggleClickHandler.bind(this);
-    this.backdropClickHandler = this.backdropClickHandler.bind(this);
-  }
+  //   // this.drawerToggleClickHandler = this.drawerToggleClickHandler.bind(this);
+  //   // this.backdropClickHandler = this.backdropClickHandler.bind(this);
+  // }
 
   
 
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
-  };
+  // drawerToggleClickHandler = () => {
+  //   this.setState((prevState) => {
+  //     return {sideDrawerOpen: !prevState.sideDrawerOpen};
+  //   });
+  // };
 
-  backdropClickHandler = () => {
-    this.setState({sideDrawerOpen: false});
-  };
+  // backdropClickHandler = () => {
+  //   this.setState({sideDrawerOpen: false});
+  // };
 
 
   render() {
-    let backdrop;
+    // let backdrop;
 
-    if (this.state.sideDrawerOpen){
-      backdrop = <Backdrop click={this.backdropClickHandler} />;
-    }
+    // if (this.state.sideDrawerOpen){
+    //   backdrop = <Backdrop click={this.backdropClickHandler} />;
+    // }
     return (
-      <View style={{height: '100%'}}>
-        <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-        <SideDrawer show={this.state.sideDrawerOpen} />
-        {backdrop}
-        <main style={{marginTop: '64px'}}>
-          <p>this is the page content</p>
-        </main>
-      </View>
+      <View></View>
+      // <View style={{height: '100%'}}>
+      //   <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
+      //   <SideDrawer show={this.state.sideDrawerOpen} />
+      //   {backdrop}
+      //   <View style={{marginTop: '64px'}}>
+      //     <Text>this is the page content</Text>
+      //   </View>
+      // </View>
     );
   }
 }
 
+export default Home;
 
 
 

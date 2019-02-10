@@ -1,38 +1,39 @@
 import React from 'react';
-import './DrawerToggleButton.css';
+// import './DrawerToggleButton.css';
+import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Dimensions, Button, TextInput,} from 'react-native';
 
-const drawerToggleButton = props => (
-    < button style={styles.toggle-button} onClick={props.click}>
-        <div style={styles.toggle-button_line}/>
-        <div style={styles.toggle-button_line}/>
-        <div style={styles.toggle-button_line}/>
-    </button>
-);
+const drawerToggleButton = props => {
+    
+        return (
+            <View>
+            
+            </View>
+        )
+    
+}
 
 export default drawerToggleButton;
 
 const styles = StyleSheet.create({
-    toggle-button: {
-        display: flex,
-        flex-direction: column,
-        justify-content: space-around,
-        height: 24px,
-        width: 30px,
-        background: transparent,
-        border: none,
-        cursor: pointer,
-        padding: 0,
-        box-sizing: border-box,
+    togglebutton: {
+      
+      
+     
+        height: 24,
+        width: 30,
+       
+       
+    
     },
     
-    toggle-button:focus:  {
-        outline: none,
-    },
+    // togglebutton:focus:  {
+    //     outline: none,
+    // },
     
-    toggle-button_line: {
-        width: 30px,
-        height: 2px,
-        background: white,
+    togglebutton_line: {
+        width: 30,
+        height: 2,
+        
     },
     
 })

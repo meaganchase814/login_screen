@@ -8,8 +8,9 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, AppRegistry} from 'react-native';
-import Login from './src/components/Login/Login.js'
 import Home from './src/components/Home/Home.js'
+import Login from './src/components/Login/Login.js'
+
 
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
