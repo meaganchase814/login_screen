@@ -10,7 +10,9 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, AppRegistry} from 'react-native';
 import Home from './src/components/Home/Home.js'
 import Login from './src/components/Login/Login.js'
-
+import Profile from './src/components/Profile/Profile.js'
+import Messages from './src/components/Messages/Messages.js'
+import Settings from './src/components/Settings/Settings.js'
 
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
@@ -18,6 +20,9 @@ const AppNavigator = createStackNavigator(
   {
     Home: {screen: Home},
     Login: {screen: Login},
+    Profile: {screen: Profile},
+    Messages: {screen: Messages},
+    Settings: {screen: Settings},
   },
   {
     initialRouteName: 'Login',

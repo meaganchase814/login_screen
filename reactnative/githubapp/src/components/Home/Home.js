@@ -37,15 +37,34 @@ export class Home extends Component {
     //   backdrop = <Backdrop click={this.backdropClickHandler} />;
     // }
     return (
-      <View></View>
-      // <View style={{height: '100%'}}>
-      //   <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-      //   <SideDrawer show={this.state.sideDrawerOpen} />
-      //   {backdrop}
-      //   <View style={{marginTop: '64px'}}>
-      //     <Text>this is the page content</Text>
-      //   </View>
-      // </View>
+      
+      <View style={{height: '100%'}}>
+        <View>
+          <Button style={styles.buttonContainer}
+                    title='Profile'
+                    onPress={() => this.props.navigation.navigate('Profile')}>
+          </Button> 
+          <Button style={styles.buttonContainer}
+                    title='Messages'
+                    onPress={() => this.props.navigation.navigate('Messages')}>
+          </Button> 
+          <Button style={styles.buttonContainer}
+                    title='Settings'
+                    onPress={() => this.props.navigation.navigate('Settings')}>
+          </Button> 
+          <Button style={styles.buttonContainer}
+                    title='Logout'
+                    onPress={() => this.props.navigation.navigate('Login')}>
+          </Button> 
+        </View>
+        {/* <Toolbar drawerClickHandler={this.drawerToggleClickHandler} /> */}
+        {/* <SideDrawer show={this.state.sideDrawerOpen} /> */}
+        {/* {backdrop}  */}
+        <View >
+          <Text>this is the page content</Text>
+        </View>
+      </View>
+      
     );
   }
 }

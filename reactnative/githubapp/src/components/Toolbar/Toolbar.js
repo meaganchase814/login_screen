@@ -6,20 +6,21 @@ import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Dimensions, Button,
 const toolbar = props => {
     return (
         <View style={styles.toolbar}>
-            <View style={styles.toolbar_navigation}>
+            {/* <View style={styles.toolbar_navigation}>
                 <View style={styles.toolbar}>
                     <DrawerToggleButton click={props.drawerClickHandler} />
                 </View>
                 {/* <Text style={styles.toolbar_logo}><a href="/">THE LOGO</a></Text> */}
-                <View style={styles.spacer}></View>
-                <View style={styles.toolbar_navigation_items}>
-                    <View style={styles.toolbar_navigation_items_ul}>
-                        {/* <Text style={styles.toolbar_navigation_items_li}><a href="/">Profile</a></Text>
-                        <Text style={styles.toolbar_navigation_items_li}><a href="/">Messages</a></Text>
-                        <Text style={styles.toolbar_navigation_items_li}><a href="/">Settings</a></Text> */}
-                    </View>
-                </View>
-            </View>
+                {/* <View style={styles.spacer}></View> */} */}
+                
+                <Button style={styles.buttonContainer}
+                  title='Profile'
+                  onPress={() => this.props.navigation.navigate('Profile')}
+                ></Button> 
+                
+                    
+              
+            {/* </View> */}
         </View>
     );
 };
