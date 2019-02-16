@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Image, Text, Dimensions, Button,LoginForm} from 'react-native';
+import {StyleSheet, View, Image, Text, Dimensions, Button,TouchableOpacity} from 'react-native';
 
 import Toolbar from '../Toolbar/Toolbar.js';
 import SideDrawer from '../SideDrawer/SideDrawer.js';
@@ -38,24 +38,30 @@ export class Home extends Component {
     // }
     return (
       
-      <View style={{height: '100%'}}>
-        <View>
-          <Button style={styles.buttonContainer}
+      <View style={styles.container}>
+        <View style={styles.buttonWraper}>
+          
+          <TouchableOpacity 
                     title='Profile'
                     onPress={() => this.props.navigation.navigate('Profile')}>
-          </Button> 
-          <Button style={styles.buttonContainer}
+                    <Text style={styles.buttonContainer}>Profile</Text>
+          </TouchableOpacity> 
+          
+          <TouchableOpacity 
                     title='Messages'
                     onPress={() => this.props.navigation.navigate('Messages')}>
-          </Button> 
-          <Button style={styles.buttonContainer}
+                    <Text style={styles.buttonContainer}>Messages</Text>
+          </TouchableOpacity> 
+          <TouchableOpacity 
                     title='Settings'
                     onPress={() => this.props.navigation.navigate('Settings')}>
-          </Button> 
-          <Button style={styles.buttonContainer}
+                    <Text style={styles.buttonContainer}>Settings</Text>
+          </TouchableOpacity> 
+          <TouchableOpacity 
                     title='Logout'
                     onPress={() => this.props.navigation.navigate('Login')}>
-          </Button> 
+                    <Text style={styles.buttonContainer}>Logout</Text>
+          </TouchableOpacity> 
         </View>
         {/* <Toolbar drawerClickHandler={this.drawerToggleClickHandler} /> */}
         {/* <SideDrawer show={this.state.sideDrawerOpen} /> */}
@@ -143,5 +149,23 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#3498db'
     },
+    buttonContainer: {
+      fontSize: 10,
+      color: 'red',  
+      backgroundColor: 'lightgrey',
+      width: 100,
+      textAlign: 'center',
+      justifyContent: 'center',
+      margin: 1,
+      
+    },
+    buttonWraper: {
+      flex: 7,
+      flexWrap: 'wrap', 
+      alignItems: 'flex-start',
+      flexDirection:'row',
+      
+    },
+
     
 })
