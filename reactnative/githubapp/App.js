@@ -13,6 +13,7 @@ import Login from './src/components/Login/Login.js'
 import Profile from './src/components/Profile/Profile.js'
 import Messages from './src/components/Messages/Messages.js'
 import Settings from './src/components/Settings/Settings.js'
+import SignUp from './src/components/SignUp/SignUp.js'
 
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
@@ -23,6 +24,7 @@ const AppNavigator = createStackNavigator(
     Profile: {screen: Profile},
     Messages: {screen: Messages},
     Settings: {screen: Settings},
+    SignUp: {screen: SignUp},
   },
   {
     initialRouteName: 'Login',

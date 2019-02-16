@@ -157,6 +157,7 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       justifyContent: 'center',
       margin: 1,
+      height: 15,
       
     },
     buttonWraper: {
