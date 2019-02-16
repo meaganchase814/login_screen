@@ -13,7 +13,7 @@ export default class SignUp extends Component {
                 />
             </View>
             <View style={styles.container}>
-                <View style={styles.buttonWrapper}>
+                <View style={styles.inputWrapper} >
                     <TextInput 
                             placeholder="First Name"
                             placeholderTextColor='rgba(255, 255, 255, 0.2)'
@@ -136,11 +136,18 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         color: '#FFF',
         paddingHorizontal: 10,
-        marginLeft: 50,
-        marginRight: 50,
+        marginLeft: 10,
+        marginRight: 10,
         borderRadius: 50,
         width: 100,
+        
+    },
+    inputWrapper: {
         flexGrow: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexWrap: 'wrap'
     },
     buttonContainer: {
         fontSize: 10,
