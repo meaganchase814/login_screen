@@ -14,6 +14,10 @@ import Profile from './src/components/Profile/Profile.js'
 import Messages from './src/components/Messages/Messages.js'
 import Settings from './src/components/Settings/Settings.js'
 import SignUp from './src/components/SignUp/SignUp.js'
+import ConfirmPhone from './src/components/SignUp/ConfirmPhone.js'
+import PersonalInfo from './src/components/SignUp/PersonalInfo.js'
+import Preferences from './src/components/SignUp/Preferences.js'
+import UploadPhoto from './src/components/SignUp/UploadPhoto.js'
 
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
@@ -25,9 +29,13 @@ const AppNavigator = createStackNavigator(
     Messages: {screen: Messages},
     Settings: {screen: Settings},
     SignUp: {screen: SignUp},
+    ConfirmPhone: {screen: ConfirmPhone},
+    PersonalInfo: {screen: PersonalInfo},
+    Preferences: {screen: Preferences},
+    UploadPhoto: {screen: UploadPhoto},
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'ConfirmPhone',
   }
   
 );

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Dimensions, Button, TextInput,TouchableOpacity} from 'react-native';
 
 export default class Login extends Component {
+    
     render() {
         return(
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
@@ -47,12 +48,14 @@ export default class Login extends Component {
                                 <Text style={styles.buttonContainer}>Login</Text>
                                 </TouchableOpacity>
                             </View>
+                            
                             <View>
+                                <Text style={{flexWrap: 'wrap'}} >Don't have an account?</Text>
                                 <TouchableOpacity 
                                 title='SignUp'
                                 onPress={() => this.props.navigation.navigate('SignUp')}
                                 >
-                                    <Text style={styles.buttonContainer}>Sign Up</Text>
+                                    <Text style={styles.buttonContainer2}>Sign Up</Text>
                                 </TouchableOpacity>    
                             </View>                        
                         </View>
@@ -112,30 +115,43 @@ const styles = StyleSheet.create({
        justifyContent: 'center'
     },
     input: {
-        height: 40,
+        height: 60,
         backgroundColor: 'rgba(255, 255, 255, 0.2)',
         marginBottom: 10,
         color: '#FFF',
         paddingHorizontal: 10,
         marginLeft: 50,
         marginRight: 50,
-        borderRadius: 50,
+        
     },
     buttonContainer: {
         fontSize: 10,
         color: 'red',  
         backgroundColor: 'lightgrey',
-        marginLeft: 150,
-        marginRight: 150,
+        marginLeft: 50,
+        marginRight: 50,
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
         margin: 1,
-        borderRadius: 50,
+        height: 30,
+        paddingTop: 2,
+      },
+      buttonContainer2: {
+        fontSize: 10,
+        color: 'red',  
+        
+        marginLeft: 150,
+        // marginRight: 150,
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        margin: 1,
+
         height: 20,
         paddingTop: 2,
       },
-      buttonWraper: {
+      buttonWrapper: {
         flexGrow: 1, 
         alignItems: 'center',
         flexDirection:'row',
