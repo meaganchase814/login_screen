@@ -110,17 +110,16 @@ const styles = StyleSheet.create({
        
       },
     buttonContainer: {
-        fontSize: 10,
+        fontSize: 20,
         color: 'red',  
         backgroundColor: 'lightgrey',
-        marginLeft: 150,
-        marginRight: 150,
+        marginLeft: 50,
+        marginRight: 50,
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        margin: 1,
-        
-        height: 20,
+        marginBottom: 20,
+        height: 40,
         paddingTop: 2,
       },
       buttonContainer2: {
