@@ -35,7 +35,7 @@ const AppNavigator = createStackNavigator(
     UploadPhoto: {screen: UploadPhoto},
   },
   {
-    initialRouteName: 'PersonalInfo',
+    initialRouteName: 'Preferences',
   }
   
 );
