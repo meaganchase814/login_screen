@@ -18,6 +18,7 @@ import ConfirmPhone from './src/components/SignUp/ConfirmPhone.js'
 import PersonalInfo from './src/components/SignUp/PersonalInfo.js'
 import Preferences from './src/components/SignUp/Preferences.js'
 import UploadPhoto from './src/components/SignUp/UploadPhoto.js'
+import Zipcode from './src/components/SignUp/Zipcode.js'
 
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
@@ -33,9 +34,10 @@ const AppNavigator = createStackNavigator(
     PersonalInfo: {screen: PersonalInfo},
     Preferences: {screen: Preferences},
     UploadPhoto: {screen: UploadPhoto},
+    Zipcode: {screen: Zipcode},
   },
   {
-    initialRouteName: 'Preferences',
+    initialRouteName: 'Zipcode',
   }
   
 );
