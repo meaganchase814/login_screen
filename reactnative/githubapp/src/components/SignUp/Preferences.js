@@ -13,8 +13,8 @@ export default class Preferences extends Component {
     render() {
         return(
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
-                <View >
-                    <View style={{justifyContent: 'center', alignItems: 'center'}} >
+                <View style={styles.container}>
+                    <View  >
                         <Text>Add an interest</Text>
                             <View style={styles.inputWrapper}>
                                 <TextInput 
@@ -41,7 +41,7 @@ export default class Preferences extends Component {
                             </View>
                                            
                     </View>
-                    <View style={{justifyContent: 'center', alignItems: 'center'}}>
+                    <View>
                         <Text>Select connections that interest you</Text>
                         <View style={{flexDirection: 'row'}}>
                             <TouchableOpacity
@@ -64,7 +64,7 @@ export default class Preferences extends Component {
                             </TouchableOpacity>  
                         </View>
                     </View>
-                    <View style={{justifyContent: 'center', alignItems: 'center'}}>
+                    <View>
                         <Text>Select meeting preferences</Text>
                         <View style={{flexDirection: 'row'}}>
                             <TouchableOpacity
@@ -97,7 +97,6 @@ export default class Preferences extends Component {
                         <TouchableOpacity 
                             title='Next'
                             onPress={() => this.props.navigation.navigate('Home')}
-                            style={{justifyContent: 'center', alignItems: 'center'}}
                             >
                             <Text style={styles.buttonContainer}>Next</Text>
                         </TouchableOpacity>                
@@ -115,12 +114,7 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width,
         flex: 1,
         backgroundColor: '#3498db',
-        justifyContent: 'center',
-        
-        flexDirection: 'column',
-        // display: 'block',
-        
-
+        flexWrap: 'wrap',
     },
     logoContainer: {
         alignItems: 'center',
@@ -170,7 +164,7 @@ const styles = StyleSheet.create({
     inputWrapper: {
         flexGrow: 1,
         flexDirection: 'row',
-        justifyContent: 'center',
+        alignItems: 'center',
         marginTop: 20,
     },
     buttonContainer: {
@@ -185,7 +179,6 @@ const styles = StyleSheet.create({
         paddingTop: 2,
         width: 50,
         
-        
       },
       buttonContainer2: {
         fontSize: 10,
@@ -194,7 +187,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         margin: 1,
         height: 30,
-        justifyContent: 'center',
+       
         width: 30,
         
       },
